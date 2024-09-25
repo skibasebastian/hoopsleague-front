@@ -1,0 +1,290 @@
+.App {
+  text-align: center;
+  font-family: 'Open Sans', sans;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0px 10px 0px 10px;
+  background-color: #171717;
+}
+
+.nav img {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.nav a {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0px 20px;
+}
+
+.nav span {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0px 20px;
+}
+
+.nav a:hover {
+  color: #4d6bcb;
+  border-radius: 5px;
+}
+
+.nav .active {
+  color: #4d6bcb;
+  border-radius: 5px;
+}
+
+.navAdmin {
+  /* visibility: hidden; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  padding: 0px 10px 0px 10px;
+  background-color: #3d3d3d;
+}
+
+.navAdmin a {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0px 20px;
+}
+
+.navAdmin span {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0px 20px;
+}
+
+.navAdmin a:hover {
+  color: #ff0000;
+  border-radius: 5px;
+}
+
+.navAdmin h1 {
+  font-size: 20px;
+  color:#ff0000;
+}
+
+.title {
+  font-size: 70px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.form input {
+  width: 300px;
+  height: 30px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.form select {
+  padding: 1px 2px;
+  width: 306px;
+  height: 34px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.teamNameCard {
+  width: 700px;
+  height: 120px;
+  margin: 30px;
+  padding: 0px 10px;
+  border: 1px solid black;
+  border-radius: 35px;
+}
+
+.teamNameCard a:link {
+  color:black;
+  text-decoration: none;
+}
+
+.teamNameCard a:visited {
+  color:black;
+  text-decoration: none;
+}
+
+.teamNameCard a:hover {
+  color: #4d6bcb;
+}
+
+th, td {
+  text-align: left;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ddd;
+  width: auto;
+  text-align: center;
+  /* border: 1px solid black; */
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 820px;
+  height: auto;
+  margin: 10px 0px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.wholeScore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 820px;
+  height: auto;
+  margin: 10px 0px;
+  border: 2px solid black;
+  border-radius: 35px;
+}
+
+.wholeScore h1{
+  font-size: 20px;
+}
+
+.scoreCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.scoreCard a:link {
+  color:black;
+  text-decoration: none;
+}
+
+.scoreCard a:visited {
+  color:black;
+  text-decoration: none;
+}
+
+.scoreCard a:hover {
+  color: #4d6bcb;
+}
+
+
+.scoreAway {
+  width: 300px;
+}
+
+.scoreHome {
+  width: 300px;
+}
+
+.score {
+  width: 200px;
+}
+
+.score a:link {
+  color:black;
+  text-decoration: none;
+}
+
+.score a:visited {
+  color:black;
+  text-decoration: none;
+}
+
+.score a:hover {
+  color: #4d6bcb;
+}
+
+.table {
+  table-layout: auto;
+  white-space: nowrap;
+}
+
+.table a:link {
+  color:black;
+  text-decoration: none;
+}
+
+.table a:visited {
+  color:black;
+  text-decoration: none;
+}
+
+.table a:hover {
+  color: #4d6bcb;
+}
+
+.btnDelGame  {
+  width: 90px;
+}
+
+.table input {
+ width: 40px; 
+}
+
+.tablex {
+  counter-reset: rowNumber-1;
+  border: 2px solid black;
+}
+
+.tablex tr {
+  counter-increment: rowNumber;
+}
+
+.tablex tr td:first-child::before {
+  content: counter(rowNumber);
+}
+
+.tablex a:link {
+  color:black;
+  text-decoration: none;
+}
+
+.tablex a:visited {
+  color:black;
+  text-decoration: none;
+}
+
+.tablex a:hover {
+  color: #4d6bcb;
+}
+
+.boldtext {
+  /* border: 2px solid black; */
+  width: 350px;
+  Height: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  /* vertical-align: center; */
+}
+
+.blockDiv {
+  /* border: 2px solid rgb(255, 0, 0); */
+  display: flex;
+  padding: 0px 0px 30px 0px;
+}
+
+.stats {
+  display: grid;
+  padding: 0px 3px;
+  /* border: 2px solid rgb(255, 0, 0); */
+  justify-content: center;
+  width: 350px;
+}
