@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 .App {
   text-align: center;
-  font-family: 'Open Sans', sans;
+  font-family: 'Open Sans';
 }
 
 .nav {
@@ -39,7 +41,7 @@
   border-radius: 5px;
 }
 
-.nav .active {
+.nav-item.active {
   color: #4d6bcb;
   border-radius: 5px;
 }

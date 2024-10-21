@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import Axios from 'axios';
-import logo from './images/hoopsleaguelogo.png';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from './Pages/Home';
@@ -39,22 +37,22 @@ function App() {
   return (
     <div className="App">
 
-    <div className='nav'>
+    {/* <div className='nav'>
       <div className='nav'>
       <a href="/"><img src={logo}/></a>
       <button onClick={activateAdminNavBar}>AdminPanel</button>    
       </div>  
       <ul>
-        <a href="/table">Tabela</a>
-        <a href="/schedule">Terminarz</a>
-        <a href="/scores">Wyniki</a>
-        <a href="/teams">Zespoły</a>
-        <a href="/players">Zawodnicy</a>
-        <a href="/stats">Statystyki</a>
+        <li class="nav-item"><a href="/table">Tabela</a></li>
+        <li class="nav-item"><a href="/schedule">Terminarz</a></li>
+        <li class="nav-item"><a href="/scores">Wyniki</a></li>
+        <li class="nav-item"><a href="/teams">Zespoły</a></li>
+        <li class="nav-item"><a href="/players">Zawodnicy</a></li>
+        <li class="nav-item"><a href="/stats">Statystyki</a></li>
       </ul>
-    </div>
+    </div> */}
 
-    <div id="navadm" className='navAdmin'>
+    {/* <div id="navadm" className='navAdmin'>
         <h1>Admin Panel</h1>
       <ul>
         <span>Możliwość edycji</span>
@@ -63,7 +61,7 @@ function App() {
         <a href="/teamsadmin">Zespoły</a>
         <a href="/playersadmin">Zawodnicy</a>
       </ul>
-    </div>
+    </div> */}
 
     <h1 className='title'>
         HoopsLeague
