@@ -18,6 +18,8 @@ import GameInfoAdmin from './Pages/GameInfoAdmin';
 import TeamInfo from './Pages/TeamInfo';
 import PlayerInfo from './Pages/PlayerInfo';
 import ProtectedRoutes from './ProtectedRoutes';
+import ChangePageTitle from './TitleChange';
+import NavBar from './Pages/NavBar';
 
 function App() {
 
@@ -37,20 +39,9 @@ function App() {
   return (
     <div className="App">
 
-    {/* <div className='nav'>
-      <div className='nav'>
-      <a href="/"><img src={logo}/></a>
-      <button onClick={activateAdminNavBar}>AdminPanel</button>    
-      </div>  
-      <ul>
-        <li class="nav-item"><a href="/table">Tabela</a></li>
-        <li class="nav-item"><a href="/schedule">Terminarz</a></li>
-        <li class="nav-item"><a href="/scores">Wyniki</a></li>
-        <li class="nav-item"><a href="/teams">Zespoły</a></li>
-        <li class="nav-item"><a href="/players">Zawodnicy</a></li>
-        <li class="nav-item"><a href="/stats">Statystyki</a></li>
-      </ul>
-    </div> */}
+      <ChangePageTitle pageTitle="HoopsLeague - Amateur Basketball League" />
+
+      <NavBar/>
 
     {/* <div id="navadm" className='navAdmin'>
         <h1>Admin Panel</h1>
@@ -65,30 +56,28 @@ function App() {
 
     <h1 className='title'>
         HoopsLeague
-      </h1>
+    </h1>
 
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />    
-        <Route path="/table" element={<Table />} /> 
-        <Route path="/schedule" element={<Schedule />} />
-        <Route path="/scores" element={<Scores />} />
-        <Route path="/scores/:GameID" element={<GameInfo />} />
-        <Route path="/teams" element={<Teams />} />  
-        <Route path="/teams/:TeamID" element={<TeamInfo />} />  
-        <Route path="/players" element={<Players />} />
-        <Route path="/players/:PlayerID" element={<PlayerInfo />} />
-        <Route path="/stats" element={<Stats />} />
+    <Routes>
+      <Route path="/" element={<Home />} />    
+      <Route path="/table" element={<Table />} /> 
+      <Route path="/schedule" element={<Schedule />} />
+      <Route path="/scores" element={<Scores />} />
+      <Route path="/scores/:GameID" element={<GameInfo />} />
+      <Route path="/teams" element={<Teams />} />  
+      <Route path="/teams/:TeamID" element={<TeamInfo />} />  
+      <Route path="/players" element={<Players />} />
+      <Route path="/players/:PlayerID" element={<PlayerInfo />} />
+      <Route path="/stats" element={<Stats />} />
 
-        <Route element={<ProtectedRoutes/>}>
-          <Route path="/scheduleadmin" element={<ScheduleAdmin />} />
-          <Route path="/scoresadmin" element={<ScoresAdmin />} />
-          <Route path="/scoresadmin/:GameID" element={<GameInfoAdmin />} />
-          <Route path="/teamsadmin" element={<TeamsAdmin />} /> 
-          <Route path="/playersadmin" element={<PlayersAdmin />} />
-        </Route>
-      </Routes>
-    </Router>
+      <Route element={<ProtectedRoutes/>}>
+        <Route path="/scheduleadmin" element={<ScheduleAdmin />} />
+        <Route path="/scoresadmin" element={<ScoresAdmin />} />
+        <Route path="/scoresadmin/:GameID" element={<GameInfoAdmin />} />
+        <Route path="/teamsadmin" element={<TeamsAdmin />} /> 
+        <Route path="/playersadmin" element={<PlayersAdmin />} />
+      </Route>
+    </Routes>
 
      </div>
   ); 

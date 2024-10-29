@@ -1,24 +1,26 @@
 import React, {useState, useEffect} from 'react';
 import logo from '../images/hoopsleaguelogo.png';
+import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
-
     return (
-        <div className='nav'>
-            <div className='nav'>
-                <a href="/"><img src={logo}/></a>
-                {/* <button onClick={activateAdminNavBar}>AdminPanel</button>     */}
-            </div>  
-            <ul>
-                <a href="/table">Tabela</a>
-                <a href="/schedule">Terminarz</a>
-                <a href="/scores">Wyniki</a>
-                <a href="/teams">Zespoły</a>
-                <a href="/players">Zawodnicy</a>
-                <a href="/stats">Statystyki</a>
-            </ul>
-      </div>
-    )
+    <nav>
+        <Link to="/"><img src={logo}/></Link>
+        <div className="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><NavLink to="/table">Tabela</NavLink></li>
+            <li><NavLink to="schedule">Terminarz</NavLink></li>
+            <li><NavLink to="/scores">Wyniki</NavLink></li>
+            <li><NavLink to="/teams">Zespoły</NavLink></li>
+            <li><NavLink to="/players">Zawodnicy</NavLink></li>
+            <li><NavLink to="/stats">Statystyki</NavLink></li>
+        </ul>
+    </nav>
+    );
 };
 
 export default NavBar
