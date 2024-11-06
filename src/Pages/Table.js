@@ -31,6 +31,7 @@ function Table() {
             <td></td>
             <td>
               <Link to={`/teams/${value.TeamID}`}>
+                <img width="30px" src={value.TeamLogo}></img>
                 {value.TeamName}
               </Link>
             </td>

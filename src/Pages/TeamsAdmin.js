@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 function TeamsAdmin() {
     const [TeamName, setTeamName] = useState('');
+    const [TeamLogo, setTeamLogo] = useState('');
     const [TeamNameList, setTeamNameList] = useState([]);
 
     useEffect(() => {
@@ -14,9 +15,11 @@ function TeamsAdmin() {
   
     const addTeam = () => {
       Axios.post('http://localhost:3001/api/insertteam/', {
-        TeamName: TeamName
+        TeamName: TeamName,
+        TeamLogo: TeamLogo
       });
       document.getElementById("TeamNameLabel").value = "";
+      document.getElementById("TeamLogoLabel").value = "";
     };
   
     const deleteTeam = (Team) => {
@@ -33,7 +36,18 @@ function TeamsAdmin() {
           name="TeamName" 
           onChange={(e) => { 
             setTeamName(e.target.value);
-        }}required/>
+        }}required
+        />
+
+        <label>Link do logo drużyny:</label>
+        <input
+          type="text"
+          id="TeamLogoLabel"
+          name="TeamLogo"
+          onChange={(e) => {
+            setTeamLogo(e.target.value);
+          }}
+        />
 
         <button onClick= {addTeam}>Dodaj</button> 
 
@@ -41,6 +55,7 @@ function TeamsAdmin() {
         {TeamNameList.map((value) => {
           return (
             <div className="teamNameCard">
+              <img width="100px" src={value.TeamLogo}></img>
               <Link to={`/teams/${value.TeamID}`}>
               <h1>{value.TeamName}</h1>
               </Link>

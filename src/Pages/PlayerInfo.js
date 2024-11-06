@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 function PlayerInfo() {
     const {PlayerID} = useParams();
@@ -70,6 +70,15 @@ function PlayerInfo() {
 return (
     <div className="form">
 
+      {playersData.map((playersDataX)=> {
+        return(
+          <>
+          <img width="300px" src={playersDataX.PlayerImage}></img>
+          <img width="100px" src={playersDataX.TeamLogo}></img>
+          </>
+        )
+      })}
+
         <table class="table">
         <thead>
         <tr>
@@ -82,16 +91,19 @@ return (
         </tr>
         </thead>
         <tbody>
-        { playersData.map((playersData)=> (
-        <tr >
-        <td> {playersData.FirstName } {playersData.LastName } </td>
-        <td> {playersData.TeamName } </td>
-        <td> {playersData.Jersey} </td>
-        <td> {playersData.Position} </td>
-        <td> {playersData.Height} cm </td>
-        <td> {playersData.Weight} kg</td>
-        </tr>
-        ))}
+      { playersData.map((playersData)=> {
+        return(
+          <tr >
+          <td> {playersData.FirstName } {playersData.LastName } </td>
+          <td><Link to={`/teams/${playersData.PlayerTeamID}`}> {playersData.TeamName } </Link></td>
+          <td> {playersData.Jersey} </td>
+          <td> {playersData.Position} </td>
+          <td> {playersData.Height} cm </td>
+          <td> {playersData.Weight} kg</td>
+          </tr>
+        )
+
+      })}
         </tbody>
         </table>
 

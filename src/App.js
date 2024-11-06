@@ -43,7 +43,7 @@ function App() {
 
       <NavBar/>
 
-    {/* <div id="navadm" className='navAdmin'>
+    <div id="navadm" className='navAdmin'>
         <h1>Admin Panel</h1>
       <ul>
         <span>Możliwość edycji</span>
@@ -52,7 +52,7 @@ function App() {
         <a href="/teamsadmin">Zespoły</a>
         <a href="/playersadmin">Zawodnicy</a>
       </ul>
-    </div> */}
+    </div>
 
     <h1 className='title'>
         HoopsLeague

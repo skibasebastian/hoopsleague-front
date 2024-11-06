@@ -154,7 +154,7 @@ nav span {
 
 .teamNameCard {
   width: 700px;
-  height: 120px;
+  /* height: 180px; */
   margin: 30px;
   padding: 0px 10px;
   border: 1px solid black;
