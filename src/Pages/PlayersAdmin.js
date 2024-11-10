@@ -10,6 +10,7 @@ function PlayersAdmin() {
   const [Height, setHeight] = useState('');
   const [Weight, setWeight] = useState('');
   const [Team, setTeam] = useState('');
+  const [PlayerImage, setPlayerImage] = useState('');
 
   const [playersData, setPlayersData] = useState([]);
   const [TeamNameList, setTeamNameList] = useState([]);
@@ -39,6 +40,7 @@ function PlayersAdmin() {
       Height: Height,
       Weight: Weight,
       PlayerTeamID: Team,
+      PlayerImage: PlayerImage,
     });
 
     document.getElementById("FirstNameLabel").value = "";
@@ -46,6 +48,7 @@ function PlayersAdmin() {
     document.getElementById("JerseyLabel").value = "";
     document.getElementById("HeightLabel").value = "";
     document.getElementById("WeightLabel").value = "";
+    document.getElementById("PlayerImageLabel").value = "";
 
   };
 
@@ -125,6 +128,17 @@ function PlayersAdmin() {
             return <option value={value.TeamID}>{value.TeamName}</option>
           })}
         </select>
+
+      <label>Link do zdjęcia:</label>
+
+      <input 
+        type="text" 
+        name="PlayerImage" 
+        id="PlayerImageLabel"
+        defaultValue="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" 
+        onChange={(e) => { 
+          setPlayerImage(e.target.value);
+      }}/>
 
       <button onClick= {addPlayer}>Dodaj</button> 
 

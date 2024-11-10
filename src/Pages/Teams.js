@@ -19,6 +19,7 @@ function Teams() {
         {TeamNameList.map((value) => {
           return (
             <div className="teamNameCard">
+              <img width="100px" src={value.TeamLogo}></img>
               <Link to={`/teams/${value.TeamID}`}>
               <h1>{value.TeamName}</h1>
               </Link>

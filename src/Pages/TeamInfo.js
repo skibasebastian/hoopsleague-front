@@ -37,6 +37,7 @@ function TeamInfo() {
         {TeamNameList.map((value) => {
           return (
             <div className="teamNameCard">
+              <img width="100px" src={value.TeamLogo}></img>
               <h1>{value.TeamName}</h1>
             </div>
           );
