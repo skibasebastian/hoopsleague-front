@@ -73,6 +73,10 @@ nav span {
   border-radius: 0.2rem;
 }
 
+nav h1{
+  color: white;
+}
+
 @media (max-width: 1100px) {
   nav .menu {
     display: flex;
@@ -97,6 +101,9 @@ nav span {
   height: 30px;
   padding: 0px 10px 0px 10px;
   background-color: #3d3d3d;
+  width: 100%;
+  position: sticky;
+  top: 54px;
 }
 
 .navAdmin a {
@@ -207,7 +214,7 @@ th, td {
 }
 
 .wholeScore h1{
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .scoreCard {
@@ -241,6 +248,11 @@ th, td {
 
 .score {
   width: 200px;
+  padding-top: 50px;
+}
+
+.score h1{
+  font-size: 30px;
 }
 
 .score a:link {
@@ -312,16 +324,13 @@ th, td {
 }
 
 .boldtext {
-  /* border: 2px solid black; */
   width: 350px;
   Height: 30px;
   font-weight: bold;
   font-size: 20px;
-  /* vertical-align: center; */
 }
 
 .blockDiv {
-  /* border: 2px solid rgb(255, 0, 0); */
   display: flex;
   padding: 0px 0px 30px 0px;
 }
@@ -329,7 +338,6 @@ th, td {
 .stats {
   display: grid;
   padding: 0px 3px;
-  /* border: 2px solid rgb(255, 0, 0); */
   justify-content: center;
   width: 350px;
 }

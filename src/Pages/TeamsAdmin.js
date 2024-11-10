@@ -44,6 +44,7 @@ function TeamsAdmin() {
           type="text"
           id="TeamLogoLabel"
           name="TeamLogo"
+          defaultValue="https://img.freepik.com/free-vector/basketball-logo-orange-ball_78370-1101.jpg"
           onChange={(e) => {
             setTeamLogo(e.target.value);
           }}

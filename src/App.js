@@ -20,6 +20,7 @@ import PlayerInfo from './Pages/PlayerInfo';
 import ProtectedRoutes from './ProtectedRoutes';
 import ChangePageTitle from './TitleChange';
 import NavBar from './Pages/NavBar';
+import NewsAdmin from './Pages/NewsAdmin';
 
 function App() {
 
@@ -43,17 +44,6 @@ function App() {
 
       <NavBar/>
 
-    <div id="navadm" className='navAdmin'>
-        <h1>Admin Panel</h1>
-      <ul>
-        <span>Możliwość edycji</span>
-        <a href="/scheduleadmin">Terminarz</a>
-        <a href="/scoresadmin">Wyniki</a>
-        <a href="/teamsadmin">Zespoły</a>
-        <a href="/playersadmin">Zawodnicy</a>
-      </ul>
-    </div>
-
     <h1 className='title'>
         HoopsLeague
     </h1>
@@ -71,6 +61,7 @@ function App() {
       <Route path="/stats" element={<Stats />} />
 
       <Route element={<ProtectedRoutes/>}>
+        <Route path="/newsadmin" element={<NewsAdmin />} />
         <Route path="/scheduleadmin" element={<ScheduleAdmin />} />
         <Route path="/scoresadmin" element={<ScoresAdmin />} />
         <Route path="/scoresadmin/:GameID" element={<GameInfoAdmin />} />
