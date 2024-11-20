@@ -17,26 +17,11 @@ import GameInfo from './Pages/GameInfo';
 import GameInfoAdmin from './Pages/GameInfoAdmin';
 import TeamInfo from './Pages/TeamInfo';
 import PlayerInfo from './Pages/PlayerInfo';
-import ProtectedRoutes from './ProtectedRoutes';
 import ChangePageTitle from './TitleChange';
 import NavBar from './Pages/NavBar';
 import NewsAdmin from './Pages/NewsAdmin';
 
 function App() {
-
-  function activateAdminNavBar() {
-    const x = 0;
-    const y = String(x).padStart(2, '0');
-    console.log(y);
-    // var node = document.getElementById("navadm");
-    // if (node.style.visibility=='visible') {
-    //   node.style.visibility = 'hidden';
-    // }
-    // else
-    //   node.style.visibility = 'visible'
-    // return;
-  }
-
   return (
     <div className="App">
 
@@ -60,7 +45,7 @@ function App() {
       <Route path="/players/:PlayerID" element={<PlayerInfo />} />
       <Route path="/stats" element={<Stats />} />
 
-      <Route element={<ProtectedRoutes/>}>
+      <Route>
         <Route path="/newsadmin" element={<NewsAdmin />} />
         <Route path="/scheduleadmin" element={<ScheduleAdmin />} />
         <Route path="/scoresadmin" element={<ScoresAdmin />} />

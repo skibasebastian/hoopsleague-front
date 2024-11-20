@@ -14,7 +14,7 @@ nav {
   align-items: center;
   /* height: 60px; */
   width: 100%;
-  padding: 0px 10px 0px 10px;
+  padding: 8px 10px;
   background-color: #171717;
   position: sticky;
   top: 0
@@ -39,8 +39,25 @@ nav ul li a{
   color: white;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 10px 20px;
+  padding: 5px 10px;
   margin: 0 0.5rem;
+}
+
+.loginBtn {
+  background-color: #4d6bcb;
+  border-radius: 10px;
+  padding: 5px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.loginBtnHidden {
+  display: none;
+}
+
+.loginBtn:hover{
+  background-color: white;
+  transition: ease-in 0.2s;
 }
 
 nav a:hover {
@@ -59,7 +76,7 @@ nav .menu {
   display: none;
   position: absolute;
   top: 0.75rem;
-  right: 0.5rem;
+  right: 1.5rem;
   flex-direction: column;
   justify-content: space-between;
   width: 2.25rem;
@@ -75,6 +92,23 @@ nav span {
 
 nav h1{
   color: white;
+  font-size: 15px;
+}
+
+.navAdmin {
+  /* visibility: hidden; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 30px; */
+  padding: 0px 10px 0px 10px;
+  background-color: #3d3d3d;
+  width: 100%;
+  position: sticky;
+  top: 54px;
+}
+.navAdminHidden{
+  visibility: hidden;
 }
 
 @media (max-width: 1100px) {
@@ -86,50 +120,20 @@ nav h1{
     align-items: start;
   }
   nav ul {
-    /* display: none; */
+    display: none;
     flex-direction: column;
     width: 100%;
     margin-bottom: 0.25rem;
   }
-}
+  nav ul.open{
+    display: flex;
+  }
 
-.navAdmin {
-  /* visibility: hidden; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 30px;
-  padding: 0px 10px 0px 10px;
-  background-color: #3d3d3d;
-  width: 100%;
-  position: sticky;
-  top: 54px;
-}
-
-.navAdmin a {
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 0px 20px;
-}
-
-.navAdmin span {
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 0px 20px;
-}
-
-.navAdmin a:hover {
-  color: #ff0000;
-  border-radius: 5px;
-}
-
-.navAdmin h1 {
-  font-size: 20px;
-  color:#ff0000;
+  nav ul li{
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem 0.2rem;
+  }
 }
 
 .title {
