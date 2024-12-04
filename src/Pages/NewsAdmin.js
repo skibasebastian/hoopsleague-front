@@ -28,7 +28,7 @@ function NewsAdmin() {
     return(
         <div className="form">
 
-            <h1>Dodaj zawodnika:</h1>
+            <h1>Dodaj newsa:</h1>
 
             <label>Tytuł newsa:</label>
 
@@ -59,7 +59,7 @@ function NewsAdmin() {
                         <h1>{NewsData.NewsTitle}</h1>
                         <span>{NewsData.NewsText}</span>
                         <span>&#8203;</span>
-                        <span>{NewsData.DateTime}</span>
+                        <span>{NewsData.FormDate}</span>
                     </div>
                 </>
             ))}

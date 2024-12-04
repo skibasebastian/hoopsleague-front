@@ -14,7 +14,7 @@ nav {
   align-items: center;
   /* height: 60px; */
   width: 100%;
-  padding: 0px 10px 0px 10px;
+  padding: 8px 10px;
   background-color: #171717;
   position: sticky;
   top: 0
@@ -39,8 +39,25 @@ nav ul li a{
   color: white;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 10px 20px;
+  padding: 5px 10px;
   margin: 0 0.5rem;
+}
+
+.loginBtn {
+  background-color: #4d6bcb;
+  border-radius: 10px;
+  padding: 5px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.loginBtnHidden {
+  display: none;
+}
+
+.loginBtn:hover{
+  background-color: white;
+  transition: ease-in 0.2s;
 }
 
 nav a:hover {
@@ -59,7 +76,7 @@ nav .menu {
   display: none;
   position: absolute;
   top: 0.75rem;
-  right: 0.5rem;
+  right: 1.5rem;
   flex-direction: column;
   justify-content: space-between;
   width: 2.25rem;
@@ -75,6 +92,23 @@ nav span {
 
 nav h1{
   color: white;
+  font-size: 1rem;
+}
+
+.navAdmin {
+  /* visibility: hidden; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 30px; */
+  padding: 0px 10px 0px 10px;
+  background-color: #3d3d3d;
+  width: 100%;
+  position: sticky;
+  top: 54px;
+}
+.navAdminHidden{
+  visibility: hidden;
 }
 
 @media (max-width: 1100px) {
@@ -84,52 +118,24 @@ nav h1{
   nav {
     flex-direction: column;
     align-items: start;
+    transition: all 2s;
   }
   nav ul {
-    /* display: none; */
+    display: none;
     flex-direction: column;
+    /* align-items: start; */
     width: 100%;
     margin-bottom: 0.25rem;
   }
-}
+  nav ul.open{
+    display: flex;
+  }
 
-.navAdmin {
-  /* visibility: hidden; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 30px;
-  padding: 0px 10px 0px 10px;
-  background-color: #3d3d3d;
-  width: 100%;
-  position: sticky;
-  top: 54px;
-}
-
-.navAdmin a {
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 0px 20px;
-}
-
-.navAdmin span {
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 0px 20px;
-}
-
-.navAdmin a:hover {
-  color: #ff0000;
-  border-radius: 5px;
-}
-
-.navAdmin h1 {
-  font-size: 20px;
-  color:#ff0000;
+  nav ul li{
+    width: 100%;
+    text-align: start;
+    margin: 0.5rem 0.2rem;
+  }
 }
 
 .title {
@@ -160,8 +166,8 @@ nav h1{
 }
 
 .teamNameCard {
-  width: 700px;
-  /* height: 180px; */
+  width: 35vw;
+  min-width: 300px;
   margin: 30px;
   padding: 0px 10px;
   border: 1px solid black;
@@ -195,7 +201,7 @@ th, td {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 820px;
+  width: 45vw;
   height: auto;
   margin: 10px 0px;
   border: 2px solid black;
@@ -206,7 +212,8 @@ th, td {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 820px;
+  width: 50vw;
+  min-width: 500px;
   height: auto;
   margin: 10px 0px;
   border: 2px solid black;
@@ -215,6 +222,10 @@ th, td {
 
 .wholeScore h1{
   font-size: 15px;
+}
+
+.wholeScore span{
+  font-size: 0.9rem;
 }
 
 .scoreCard {
@@ -237,17 +248,16 @@ th, td {
   color: #4d6bcb;
 }
 
-
 .scoreAway {
-  width: 300px;
+  width: 30vw;
 }
 
 .scoreHome {
-  width: 300px;
+  width: 30vw;
 }
 
 .score {
-  width: 200px;
+  width: 30vw;
   padding-top: 50px;
 }
 
@@ -299,6 +309,8 @@ th, td {
 .tablex {
   counter-reset: rowNumber-1;
   border: 2px solid black;
+  width: 35vw;
+  min-width: 300px;
 }
 
 .tablex tr {
@@ -324,10 +336,11 @@ th, td {
 }
 
 .boldtext {
-  width: 350px;
+  width: 100%;
   Height: 30px;
   font-weight: bold;
   font-size: 20px;
+  border: 2px solid blue;
 }
 
 .blockDiv {
@@ -339,5 +352,7 @@ th, td {
   display: grid;
   padding: 0px 3px;
   justify-content: center;
-  width: 350px;
+  width: 35vw;
+  min-width: 300px;
+  border: 1px solid red;
 }

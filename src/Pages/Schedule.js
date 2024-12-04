@@ -25,19 +25,22 @@ function Schedule() {
 
               <span className="scoreAway">
                 <Link to={`/teams/${value.AwayTeamID}`}>
+                <img width="100px" src={value.AwayTeamLogo}></img>
                 <h1>{value.AwayTeamName}</h1>
                 </Link>
               </span>
 
-              <span>
+              <span className="score">
                 <h1>-</h1>
               </span>
 
               <span className="scoreHome">
                 <Link to={`/teams/${value.HomeTeamID}`}>
+                <img width="100px" src={value.HomeTeamLogo}></img>
                 <h1>{value.HomeTeamName}</h1>
                 </Link>
               </span>
+              
             </div>
             <span>{value.FormDate}</span>
             </div>
