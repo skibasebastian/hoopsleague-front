@@ -24,7 +24,6 @@ import NewsAdmin from './Pages/NewsAdmin';
 function App() {
   return (
     <div className="App">
-
       <ChangePageTitle pageTitle="HoopsLeague - Amateur Basketball League" />
 
       <NavBar/>
