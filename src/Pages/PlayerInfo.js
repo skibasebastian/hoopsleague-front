@@ -73,13 +73,52 @@ function PlayerInfo() {
       {playersData.map((playersDataX) => {
         return (
           <>
-            <img width="30%" loading="lazy" src={playersDataX.PlayerImage}></img>
-            <img width="15%" src={playersDataX.TeamLogo}></img>
+            <img width="5%" loading="lazy" src={playersDataX.PlayerImage}></img>
+            {/* <img width="15%" src={playersDataX.TeamLogo}></img> */}
           </>
         )
       })}
 
-      <table class="table">
+      {playersData.map((playersData) => {
+        return (
+          <div className="playerInfoCard">
+            <div className="firstName">{playersData.FirstName}</div>
+
+            <div className="row row1">
+              <div className="lastName">{playersData.LastName}</div>
+              <Link to={`/teams/${playersData.PlayerTeamID}`}>
+                <img src={playersData.TeamLogo} />
+              </Link>
+              <div className="number">#{playersData.Jersey}</div>
+              <div className='separator'></div>
+              <div className="position">{playersData.Position}</div>
+            </div>
+
+            <div className='row row2'>
+              <div className='separator2'></div>
+            </div>
+
+            <div className="row row3">
+              <div className='smallText'>Wzrost</div>
+              <div className='smallText'>Waga</div>
+            </div>
+
+            <div className="row row4">
+              <div className='height'>
+                <div className="bigBoldText">{playersData.Height}</div>
+                <div className='smallText'> cm</div>
+              </div>
+
+              <div className='weight'>
+                <div className="bigBoldText">{playersData.Weight}</div>
+                <div className='smallText'> kg</div>
+              </div>
+            </div>
+          </div>
+        )
+      })}
+
+      {/* <table class="table">
         <thead>
           <tr>
             <th scope="col">Zawodnik</th>
@@ -105,7 +144,7 @@ function PlayerInfo() {
 
           })}
         </tbody>
-      </table>
+      </table> */}
 
       <div>.</div>
       <div className='boldtext'>Średnie statystyki</div>
