@@ -31,7 +31,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/rebleaders/").then((response) => {
@@ -39,7 +39,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/astleaders/").then((response) => {
@@ -47,7 +47,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/blkleaders/").then((response) => {
@@ -55,7 +55,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/stlleaders/").then((response) => {
@@ -63,7 +63,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/threeptleaders/").then((response) => {
@@ -71,7 +71,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/threeptprcleaders/").then((response) => {
@@ -79,7 +79,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/fgprcleaders/").then((response) => {
@@ -87,7 +87,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/ftprcleaders/").then((response) => {
@@ -95,7 +95,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/perleaders/").then((response) => {
@@ -103,7 +103,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   return (
     <div className='form'>
@@ -123,7 +123,7 @@ function Stats() {
 
               <tbody>
                 {ppgLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -149,7 +149,7 @@ function Stats() {
               </thead>
               <tbody>
                 {rebLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -178,7 +178,7 @@ function Stats() {
               </thead>
               <tbody>
                 {astLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -204,7 +204,7 @@ function Stats() {
               </thead>
               <tbody>
                 {blkLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -233,7 +233,7 @@ function Stats() {
               </thead>
               <tbody>
                 {stlLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -259,7 +259,7 @@ function Stats() {
               </thead>
               <tbody>
                 {threeptLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -288,7 +288,7 @@ function Stats() {
               </thead>
               <tbody>
                 {threeprcLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -314,7 +314,7 @@ function Stats() {
               </thead>
               <tbody>
                 {fgprcLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -343,7 +343,7 @@ function Stats() {
               </thead>
               <tbody>
                 {ftprcLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -369,7 +369,7 @@ function Stats() {
               </thead>
               <tbody>
                 {perLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -400,7 +400,7 @@ function Stats() {
 
               <tbody>
                 {ppgLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -428,7 +428,7 @@ function Stats() {
               </thead>
               <tbody>
                 {rebLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -456,7 +456,7 @@ function Stats() {
               </thead>
               <tbody>
                 {astLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -484,7 +484,7 @@ function Stats() {
               </thead>
               <tbody>
                 {blkLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -512,7 +512,7 @@ function Stats() {
               </thead>
               <tbody>
                 {stlLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -540,7 +540,7 @@ function Stats() {
               </thead>
               <tbody>
                 {threeptLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -569,7 +569,7 @@ function Stats() {
               </thead>
               <tbody>
                 {threeprcLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -597,7 +597,7 @@ function Stats() {
               </thead>
               <tbody>
                 {fgprcLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -626,7 +626,7 @@ function Stats() {
               </thead>
               <tbody>
                 {ftprcLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>
@@ -654,7 +654,7 @@ function Stats() {
               </thead>
               <tbody>
                 {perLeaders.map((value) => (
-                  <tr>
+                  <tr key={value.PlayerID}>
                     <td></td>
                     <td>
                       <Link to={`/players/${value.PlayerID}`}>

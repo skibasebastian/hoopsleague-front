@@ -18,7 +18,7 @@ function Teams() {
         <h1>Lista drużyn:</h1>
         {TeamNameList.map((value) => {
           return (
-            <div className="teamNameCard">
+            <div className="teamNameCard" key={value.TeamID}>
               <img width="100px" src={value.TeamLogo}></img>
               <Link to={`/teams/${value.TeamID}`}>
               <h1>{value.TeamName}</h1>

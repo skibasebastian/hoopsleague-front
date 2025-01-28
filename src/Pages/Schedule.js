@@ -20,7 +20,7 @@ function Schedule() {
       <h1>Terminarz:</h1>
       {ScheduleList.map((value) => {
           return (
-            <div className="wholeScore">
+            <div className="wholeScore" key={value.GameID}>
               <div className="scoreCard">
 
               <span className="scoreAway">
