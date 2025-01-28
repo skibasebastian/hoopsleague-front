@@ -19,7 +19,7 @@ function Scores() {
       <h1>Wyniki:</h1>
       {ScoreList.map((value) => {
           return (
-            <div className="wholeScore">
+            <div className="wholeScore" key={value.GameID}>
               <div className="scoreCard">
 
               <span className="scoreAway">

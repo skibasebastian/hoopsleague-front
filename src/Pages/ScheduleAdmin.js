@@ -17,7 +17,7 @@ function ScheduleAdmin() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  }, [])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/getschedule/").then((response)=> {
@@ -26,7 +26,7 @@ function ScheduleAdmin() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  }, [])
 
   const addSchedule = () => {
     Axios.post('http://localhost:3001/api/insertschedule/', {
@@ -85,7 +85,7 @@ function ScheduleAdmin() {
       <h1>Terminarz:</h1>
       {ScheduleList.map((value) => {
           return (
-            <div className="wholeScore">
+            <div className="wholeScore" key={value.GameID}>
               <div className="scoreCard">
 
               <span className="scoreAway">

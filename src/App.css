@@ -18,7 +18,8 @@ nav {
   padding: 8px 10px;
   background-color: #171717;
   position: sticky;
-  top: 0
+  top: 0;
+  left: 0;
 }
 
 nav img {
@@ -400,7 +401,7 @@ th, td {
   font-weight: 700;
   font-size: 3vw;
   text-transform: uppercase;
-  margin-right: 60px;
+  margin-right: 40px;
 }
 
 .number{
@@ -417,7 +418,7 @@ th, td {
   width: 0.2vw;
   height: 2vw;
   background-color: #4d6bcb;
-  margin: 0px 20px;
+  margin: 0px 10px;
 }
 
 .separator2{
@@ -454,4 +455,42 @@ th, td {
 .row4{
   column-gap: 2.6vw;
   margin-top: 1vw;
+}
+
+.playerAvgsDiv{
+  width: 100%;
+  height: auto;
+  background-color: #292929;
+  display: flex;
+  align-items: center;
+}
+
+.avgTable{
+  /* border: 1px solid white; */
+}
+
+.avgTable th{
+  color: white;
+  font-size: 0.8vw;
+  margin-right: 10px;
+  font-weight: 100;
+  margin-bottom: 5px;
+  border: none;
+}
+
+.avgTable td{
+  color: white;
+  font-size: 1vw;
+  margin-right: 10px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  border: none;
+}
+
+.smallTextAvg{
+  color: white;
+  font-size: 0.8vw;
+  margin-right: 10px;
+  font-weight: 100;
+  margin-bottom: 5px;
 }

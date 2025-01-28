@@ -87,7 +87,7 @@ function GameInfo() {
         <div className="form">
           {ScoreList.map((value) => {
               return (
-                <div className="wholeScore">
+                <div className="wholeScore" key={value.GameID}>
                   <div className="scoreCard">
     
                   <span className="scoreAway">

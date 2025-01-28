@@ -114,6 +114,80 @@ function PlayerInfo() {
                 <div className='smallText'> kg</div>
               </div>
             </div>
+
+            <div className='row row5'>
+              <div className='separator2'></div>
+            </div>
+
+            <div className="playerAvgsDiv">
+              <table className="avgTable">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">MIN</th>
+                    <th scope="col">PTS</th>
+                    <th scope="col">RBT</th>
+                    <th scope="col">AST</th>
+                    <th scope="col">PER</th>
+                    <th scope="col">STL</th>
+                    <th scope="col">BLK</th>
+                    <th scope="col">FG</th>
+                    <th scope="col">FG%</th>
+                    <th scope="col">3P</th>
+                    <th scope="col">3P%</th>
+                    <th scope="col">FT</th>
+                    <th scope="col">FT%</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {playersAvgs.map((value) => (
+                    <tr>
+                      <td class='smallTextAvg'>Statystyki średnie</td>
+                      <td>
+                        {value.mpg}
+                      </td>
+                      <td>
+                        {value.ppg}
+                      </td>
+                      <td>
+                        {value.rebpg}
+                      </td>
+                      <td>
+                        {value.apg}
+                      </td>
+                      <td>
+                        {value.per}
+                      </td>
+                      <td>
+                        {value.stl}
+                      </td>
+                      <td>
+                        {value.blk}
+                      </td>
+                      <td>
+                        {value.fgm}/{value.fga}
+                      </td>
+                      <td>
+                        {prcntgCalc(value.fga, value.fgm)}
+                      </td>
+                      <td>
+                        {value.threepm}/{value.threepa}
+                      </td>
+                      <td>
+                        {prcntgCalc(value.threepa, value.threepm)}
+                      </td>
+                      <td>
+                        {value.ftm}/{value.fta}
+                      </td>
+                      <td>
+                        {prcntgCalc(value.fta, value.ftm)}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
           </div>
         )
       })}

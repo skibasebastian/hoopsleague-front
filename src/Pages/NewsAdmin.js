@@ -54,14 +54,14 @@ function NewsAdmin() {
             <button onClick= {addNews}>Dodaj</button>
 
             {NewsData.map((NewsData) => (
-                <>
+                <div key={NewsData.NewsID}>
                     <div className="infoCard">
                         <h1>{NewsData.NewsTitle}</h1>
                         <span>{NewsData.NewsText}</span>
                         <span>&#8203;</span>
                         <span>{NewsData.FormDate}</span>
                     </div>
-                </>
+                </div>
             ))}
 
         </div>
