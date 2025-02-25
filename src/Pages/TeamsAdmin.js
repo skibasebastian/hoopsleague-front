@@ -11,7 +11,7 @@ function TeamsAdmin() {
       Axios.get("http://localhost:3001/api/getteam/").then((response)=> {
         setTeamNameList(response.data)
       })
-    })
+    },[])
   
     const addTeam = () => {
       Axios.post('http://localhost:3001/api/insertteam/', {

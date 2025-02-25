@@ -21,7 +21,7 @@ function PlayersAdmin() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/getteam/").then((response)=> {
@@ -29,7 +29,7 @@ function PlayersAdmin() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   const addPlayer = () => {
     Axios.post('http://localhost:3001/api/insertplayer/', {

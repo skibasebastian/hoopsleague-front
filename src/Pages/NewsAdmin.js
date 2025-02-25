@@ -13,7 +13,7 @@ function NewsAdmin() {
         }).catch((err) => {
           console.log(err)
         })
-    })
+    },[])
 
     const addNews = () => {
         Axios.post('http://localhost:3001/api/insertnews/', {

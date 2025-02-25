@@ -17,7 +17,7 @@ function ScoresAdmin() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/getschedulenoscore/").then((response)=> {
@@ -25,7 +25,7 @@ function ScoresAdmin() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/getgamedetails/",{
@@ -37,7 +37,7 @@ function ScoresAdmin() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   const addScore = () => {
 
