@@ -9,7 +9,7 @@ function Table() {
     Axios.get("http://localhost:3001/api/gettable/").then((response) => {
       setWinList(response.data)
     })
-  })
+  },[])
 
   return (
     <div className="form">

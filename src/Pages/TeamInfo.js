@@ -18,7 +18,7 @@ function TeamInfo() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/getplayerfromteam/", {
@@ -30,7 +30,7 @@ function TeamInfo() {
     }).catch((err) => {
       console.log(err)
     })
-  })
+  },[])
 
   return (
     <div className="form">
@@ -44,7 +44,7 @@ function TeamInfo() {
       })}
 
       <h1>Lista zawodników:</h1>
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">Zawodnik</th>
@@ -58,7 +58,7 @@ function TeamInfo() {
           {playersData.map((playersData) => (
             <tr >
               <td><Link to={`/players/${playersData.PlayerID}`}>
-                <a>{playersData.FirstName} {playersData.LastName}</a>
+                {playersData.FirstName} {playersData.LastName}
               </Link>
               </td>
               <td> {playersData.Jersey} </td>

@@ -9,7 +9,7 @@ function Teams() {
       Axios.get("http://localhost:3001/api/getteam/").then((response)=> {
         setTeamNameList(response.data)
       })
-    })
+    },[])
 
   return (
 

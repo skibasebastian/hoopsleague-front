@@ -42,7 +42,7 @@ function GameInfo() {
         }).catch((err) => {
           console.log(err)
         })
-      })
+      },[])
 
       // useEffect(() => {
       //   Axios.get("http://localhost:3001/api/getplayeractionsfromgame/",{
@@ -66,7 +66,7 @@ function GameInfo() {
         }).catch((err) => {
           console.log(err)
         })
-      })
+      },[])
 
       useEffect(() => {
         Axios.get("http://localhost:3001/api/gethomeplayeractionsfromgame/",{
@@ -78,7 +78,7 @@ function GameInfo() {
         }).catch((err) => {
           console.log(err)
         })
-      })
+      },[])
 
       let AwayTeamName = PlayersFromAwayTeamList.map(a => a.PlayerTeamName);
       let HomeTeamName = PlayersFromHomeTeamList.map(a => a.PlayerTeamName);

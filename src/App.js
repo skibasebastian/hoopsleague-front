@@ -28,9 +28,9 @@ function App() {
 
       <NavBar/>
 
-    <h1 className='title'>
+    {/* <h1 className='title'>
         HoopsLeague
-    </h1>
+    </h1> */}
 
     <Routes>
       <Route path="/" element={<Home />} />    
