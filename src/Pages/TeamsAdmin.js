@@ -20,10 +20,12 @@ function TeamsAdmin() {
       });
       document.getElementById("TeamNameLabel").value = "";
       document.getElementById("TeamLogoLabel").value = "";
+      window.location.reload(false);
     };
   
     const deleteTeam = (Team) => {
       Axios.delete(`http://localhost:3001/api/deleteteam/${Team}`);
+      window.location.reload(false);
     }
 
   return (
@@ -44,7 +46,7 @@ function TeamsAdmin() {
           type="text"
           id="TeamLogoLabel"
           name="TeamLogo"
-          defaultValue="https://img.freepik.com/free-vector/basketball-logo-orange-ball_78370-1101.jpg"
+          defaultValue="https://png.pngtree.com/png-vector/20220512/ourmid/pngtree-basketball-logo-template-icon-sport-png-image_4614534.png"
           onChange={(e) => {
             setTeamLogo(e.target.value);
           }}
@@ -52,11 +54,10 @@ function TeamsAdmin() {
 
         <button onClick= {addTeam}>Dodaj</button> 
 
-        <h1>Lista drużyn:</h1>
         {TeamNameList.map((value) => {
           return (
             <div className="teamNameCard">
-              <img width="100px" src={value.TeamLogo}></img>
+              <img width="100px" alt="Team Logo" src={value.TeamLogo}></img>
               <Link to={`/teams/${value.TeamID}`}>
               <h1>{value.TeamName}</h1>
               </Link>

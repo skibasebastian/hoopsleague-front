@@ -31,7 +31,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  },[])
+  }, [])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/rebleaders/").then((response) => {
@@ -39,7 +39,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  },[])
+  }, [])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/astleaders/").then((response) => {
@@ -47,7 +47,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  },[])
+  }, [])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/blkleaders/").then((response) => {
@@ -55,7 +55,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  },[])
+  }, [])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/stlleaders/").then((response) => {
@@ -63,7 +63,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  },[])
+  }, [])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/threeptleaders/").then((response) => {
@@ -71,7 +71,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  },[])
+  }, [])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/threeptprcleaders/").then((response) => {
@@ -79,7 +79,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  },[])
+  }, [])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/fgprcleaders/").then((response) => {
@@ -87,7 +87,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  },[])
+  }, [])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/ftprcleaders/").then((response) => {
@@ -95,7 +95,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  },[])
+  }, [])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/perleaders/").then((response) => {
@@ -103,7 +103,7 @@ function Stats() {
     }).catch((err) => {
       console.log(err)
     })
-  },[])
+  }, [])
 
   return (
     <div className='form'>
