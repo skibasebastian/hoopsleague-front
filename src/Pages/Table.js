@@ -9,7 +9,7 @@ function Table() {
     Axios.get("http://localhost:3001/api/gettable/").then((response) => {
       setWinList(response.data)
     })
-  },[])
+  }, [])
 
   return (
     <div className="form">
@@ -27,18 +27,18 @@ function Table() {
 
         <tbody>
           {WinList.map((value) => (
-              <tr key={value.TeamID}>
-                <td></td>
-                <td>
-                  <Link to={`/teams/${value.TeamID}`}>
-                    <img width="20vw" src={value.TeamLogo}></img>
-                    {value.TeamName}
-                  </Link>
-                </td>
-                <td>{value.TotalWins}</td>
-                <td>{value.TotalLosses}</td>
-                <td>{value.TotalWins + value.TotalLosses}</td>
-              </tr>
+            <tr key={value.TeamID}>
+              <td></td>
+              <td>
+                <Link to={`/teams/${value.TeamID}`}>
+                  <img width="20vw" src={value.TeamLogo}></img>
+                  {value.TeamName}
+                </Link>
+              </td>
+              <td>{value.TotalWins}</td>
+              <td>{value.TotalLosses}</td>
+              <td>{value.TotalWins + value.TotalLosses}</td>
+            </tr>
 
           ))}
         </tbody>

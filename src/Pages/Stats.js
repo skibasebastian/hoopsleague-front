@@ -112,7 +112,7 @@ function Stats() {
         <div className="blockDiv">
           <div className="stats">
             <div className='boldtext'>Punkty na mecz</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -139,7 +139,7 @@ function Stats() {
 
           <div className="stats">
             <div className='boldtext'>Zbiórki na mecz</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -168,7 +168,7 @@ function Stats() {
 
           <div className="stats">
             <div className='boldtext'>Asysty na mecz</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -194,7 +194,7 @@ function Stats() {
 
           <div className="stats">
             <div className='boldtext'>Bloki na mecz</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -223,7 +223,7 @@ function Stats() {
 
           <div className="stats">
             <div className='boldtext'>Przechwyty na mecz</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -249,7 +249,7 @@ function Stats() {
 
           <div className="stats">
             <div className='boldtext'>Suma trafionych rzutów za 3pkt</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -278,7 +278,7 @@ function Stats() {
 
           <div className="stats">
             <div className='boldtext'>Skuteczność rzutów za 3pkt</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -304,7 +304,7 @@ function Stats() {
 
           <div className="stats">
             <div className='boldtext'>Skuteczność rzutowa</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -333,7 +333,7 @@ function Stats() {
 
           <div className="stats">
             <div className='boldtext'>Skuteczność rzutów wolnych</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -359,7 +359,7 @@ function Stats() {
 
           <div className="stats">
             <div className='boldtext'>Wskaźnik PER</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -389,7 +389,7 @@ function Stats() {
         <div className="blockDiv">
           <div className="stats">
             <div className='boldtext'>Punkty na mecz</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -418,7 +418,7 @@ function Stats() {
         <div className="blockDiv">
           <div className="stats">
             <div className='boldtext'>Zbiórki na mecz</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -446,7 +446,7 @@ function Stats() {
         <div className="blockDiv">
           <div className="stats">
             <div className='boldtext'>Asysty na mecz</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -474,7 +474,7 @@ function Stats() {
         <div className="blockDiv">
           <div className="stats">
             <div className='boldtext'>Bloki na mecz</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -502,7 +502,7 @@ function Stats() {
         <div className="blockDiv">
           <div className="stats">
             <div className='boldtext'>Przechwyty na mecz</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -530,7 +530,7 @@ function Stats() {
         <div className="blockDiv">
           <div className="stats">
             <div className='boldtext'>Suma trafionych rzutów za 3pkt</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -559,7 +559,7 @@ function Stats() {
         <div className="blockDiv">
           <div className="stats">
             <div className='boldtext'>Skuteczność rzutów za 3pkt</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -587,7 +587,7 @@ function Stats() {
         <div className="blockDiv">
           <div className="stats">
             <div className='boldtext'>Skuteczność rzutowa</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -616,7 +616,7 @@ function Stats() {
         <div className="blockDiv">
           <div className="stats">
             <div className='boldtext'>Skuteczność rzutów wolnych</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>
@@ -644,7 +644,7 @@ function Stats() {
         <div className="blockDiv">
           <div className="stats">
             <div className='boldtext'>Wskaźnik PER</div>
-            <table className="tablex">
+            <table className="tableStats">
               <thead>
                 <tr>
                   <th scope="col">Poz.</th>

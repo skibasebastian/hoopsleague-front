@@ -16,7 +16,7 @@ function Players() {
   return (
     <div className="form">
 
-      <div className='playerInfoCard'>
+      <div className='playerInfoList'>
         <div className='boldtext'>Lista zawodników</div>
         <table className="table">
           <thead>

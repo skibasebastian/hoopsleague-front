@@ -49,7 +49,7 @@ function PlayersAdmin() {
     document.getElementById("HeightLabel").value = "";
     document.getElementById("WeightLabel").value = "";
     document.getElementById("PlayerImageLabel").value = "";
-
+    window.location.reload(false);
   };
 
   return (
@@ -144,7 +144,7 @@ function PlayersAdmin() {
 
       <button onClick={addPlayer}>Dodaj</button>
 
-      <div className='playerInfoCard'>
+      <div className='playerInfoList'>
         <div className='boldtext'>Lista zawodników</div>
         <table className="table">
           <thead>

@@ -120,6 +120,7 @@ function GameInfoAdmin() {
         Points: Points.toString(),
         PER: PER,
       });
+      window.location.reload(false);
     };
 
     useEffect(() => {
