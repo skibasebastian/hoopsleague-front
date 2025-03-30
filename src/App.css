@@ -4,10 +4,10 @@
 .App {
   text-align: center;
   font-family: 'Roboto';
-  min-width: 800px;
+  /* min-width: 800px; */
 }
 
-body {    
+body {
   margin: 0 !important;
   padding: 0 !important;
   background: #292929;
@@ -21,6 +21,7 @@ nav {
   padding: 8px 10px;
   background-color: #171717;
   position: sticky;
+  border-bottom: 2px solid;
 }
 
 nav img {
@@ -29,7 +30,7 @@ nav img {
   height: 40px;
 }
 
-nav ul{
+nav ul {
   display: flex;
 }
 
@@ -37,7 +38,7 @@ nav ul li {
   list-style: none;
 }
 
-nav ul li a{
+nav ul li a {
   text-decoration: none;
   font-weight: 300;
   color: white;
@@ -50,7 +51,7 @@ nav ul li a{
   background-color: #4d6bcb;
   border-radius: 10px;
   padding: 5px 20px;
-  margin: 10px;
+  /* margin: 0px 10px; */
   cursor: pointer;
 }
 
@@ -58,15 +59,16 @@ nav ul li a{
   display: none;
 }
 
-.loginBtn:hover{
-  background-color: white;
-  transition: ease-in 0.2s;
+.loginBtn:hover {
+  background-color: #4d6acbcc;
+  color: white;
+  transition: ease-in-out 0.2s;
 }
 
 nav a:hover {
   color: #4d6bcb;
   /* font-weight: 600; */
-  transition: ease-in 0.2s;
+  transition: ease-in-out 0.2s;
 }
 
 .active {
@@ -95,56 +97,23 @@ nav span {
   border-radius: 0.2rem;
 }
 
-nav h1{
+nav h1 {
   color: white;
   font-size: 1rem;
 }
 
 .navAdmin {
-  /* visibility: hidden; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* height: 30px; */
   padding: 0px 10px 0px 10px;
   background-color: #3d3d3d;
-  /* width: 100%; */
-  /* position: sticky; */
-  /* top: 54px; */
-  /* transition: ease-in 0.2s; */
+  margin-bottom: 20px;
 }
-.navAdminHidden{
+
+.navAdminHidden {
   visibility: hidden;
-}
-
-@media (max-width: 1200px) {
-  nav .menu {
-    display: flex;
-  }
-  nav {
-    width: auto;
-    flex-direction: column;
-    align-items: center;
-    /* transition: all 2s; */
-  }
-  nav ul {
-    display: none;
-    flex-direction: column;
-    /* align-items: center; */
-    width: 100%;
-    margin-bottom: 0.25rem;
-  }
-  nav ul.open{
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-  }
-
-  nav ul li{
-    width: 100%;
-    text-align: center;
-    margin: 0.5rem 0.2rem;
-  }
+  height: 0px;
 }
 
 .title {
@@ -174,36 +143,39 @@ nav h1{
   font-size: 20px;
 }
 
-
 .teamNameCard {
-  width: 30vw;
-  /* min-width: auto; */
-  /* margin: 30px; */
+  /* width: 40vw; */
+  /* min-width: 300px; */
+  height: 14rem;
   padding: 0px 10px;
   margin: 0px 20px 0px 20px;
-  border: 1px solid black;
+  /* border: 2px solid black; */
   border-radius: 30px;
+  background-color: #3d3d3d;
+  box-shadow: 8px 8px 24px 0px rgb(0, 0, 0);
 }
 
-.gridDiv{
+h1 {
+  color: white;
+  font-weight: 400;
+}
+
+.gridDiv {
   display: grid;
-  /* gap: 2rem; */
-  /* grid-template-columns: repeat(auto-fit, minmax(80vw, 1fr)); */
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  /* grid-template-columns: 1fr 1fr 1fr; */
+  gap: 3rem 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
 .teamNameCard a:link {
-  color:black;
   text-decoration: none;
 }
 
-.teamNameCard a:visited {
-  color:black;
+.teamNameCard h1:visited {
+  color: black;
   text-decoration: none;
 }
 
-.teamNameCard a:hover {
+.teamNameCard h1:hover {
   color: #4d6bcb;
 }
 
@@ -227,11 +199,15 @@ td {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 45vw;
   height: auto;
-  margin: 10px 0px;
-  border: 2px solid black;
-  border-radius: 10px;
+  min-width: 800px;
+  max-width: 1200px;
+  background-color: #3d3d3d;
+  box-shadow: 8px 8px 24px 0px rgb(0, 0, 0);
+  border-radius: 30px;
+  margin: 20px 50px;
+  color: white;
+  padding: 0px 30px;
 }
 
 .wholeScore {
@@ -239,19 +215,23 @@ td {
   flex-direction: column;
   justify-content: center;
   width: 50vw;
-  min-width: 500px;
+  min-width: 300px;
   height: auto;
-  margin: 10px 0px;
-  border: 2px solid black;
-  border-radius: 35px;
+  margin: 20px 0px;
+  padding: 5px;
+  box-shadow: 8px 8px 24px 0px rgb(0, 0, 0);
+  /* border: 2px solid black; */
+  border-radius: 30px;
+  background-color: #3d3d3d;
 }
 
-.wholeScore h1{
-  font-size: 15px;
+.wholeScore h1 {
+  font-size: 20px;
 }
 
-.wholeScore span{
+.wholeScore span {
   font-size: 0.9rem;
+  color: white;
 }
 
 .scoreCard {
@@ -261,43 +241,50 @@ td {
 }
 
 .scoreCard a:link {
-  color:black;
+  color: black;
   text-decoration: none;
 }
 
-.scoreCard a:visited {
-  color:black;
+.scoreCard h1:visited {
+  color: black;
   text-decoration: none;
 }
 
-.scoreCard a:hover {
+.scoreCard h1:hover {
   color: #4d6bcb;
 }
 
-.scoreAway {
+.scoreAway, .scoreHome {
   width: 30vw;
+  /* border: 2px solid red; */
 }
 
-.scoreHome {
-  width: 30vw;
+.scoreAway img{
+  width: 100px;
+}
+
+.scoreHome img{
+  width: 100px;
 }
 
 .score {
-  width: 30vw;
+  width: 50px;
   padding-top: 50px;
+  margin: 0px 50px;
+  /* border: 2px solid black; */
 }
 
-.score h1{
+.score h1 {
   font-size: 30px;
 }
 
 .score a:link {
-  color:black;
+  color: black;
   text-decoration: none;
 }
 
 .score a:visited {
-  color:black;
+  color: black;
   text-decoration: none;
 }
 
@@ -313,12 +300,12 @@ td {
 }
 
 .table a:link {
-  color:white;
+  color: white;
   text-decoration: none;
 }
 
 .table a:visited {
-  color:white;
+  color: white;
   text-decoration: none;
 }
 
@@ -326,19 +313,27 @@ td {
   color: #4d6bcb;
 }
 
-.btnDelGame  {
+.btnDelGame {
   width: 90px;
 }
 
 .table input {
- width: 40px; 
+  width: 40px;
 }
 
-.tablex {
+.tablex,
+.tableStats {
   counter-reset: rowNumber-1;
   /* border: 2px solid black; */
-  width: 400px;
+  width: 40vw;
   padding-bottom: 5px;
+  box-shadow: 8px 8px 24px 0px rgb(0, 0, 0);
+  border-radius: 30px;
+  background-color: #3d3d3d;
+}
+
+.tableStats td{
+  padding: 10px 10px;
 }
 
 .tablex tr {
@@ -350,16 +345,42 @@ td {
 }
 
 .tablex a:link {
-  color:white;
+  color: white;
   text-decoration: none;
 }
 
 .tablex a:visited {
-  color:white;
+  color: white;
   text-decoration: none;
 }
 
 .tablex a:hover {
+  color: #4d6bcb;
+}
+
+.tableStats {
+  box-shadow: none;
+}
+
+.tableStats tr {
+  counter-increment: rowNumber;
+}
+
+.tableStats tr td:first-child::before {
+  content: counter(rowNumber);
+}
+
+.tableStats a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.tableStats a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.tableStats a:hover {
   color: #4d6bcb;
 }
 
@@ -379,9 +400,10 @@ td {
 }
 
 .stats {
-  display: grid;
-  padding: 0px 0px;
-  place-content: center;
+  display: flex;
+  flex-direction: column;
+  /* padding: 0px 0px; */
+  align-items: center;
   width: auto;
   min-width: 300px;
   background-color: #3d3d3d;
@@ -389,10 +411,10 @@ td {
   border-radius: 30px;
   margin: 0 30px;
   margin-top: 50px;
-  /* border: 1px solid red; */
+  /* border: 2px solid black; */
 }
 
-.tablex th{
+.tablex th {
   color: white;
   font-size: 0.8rem;
   font-weight: 100;
@@ -401,7 +423,7 @@ td {
   text-align: left;
 }
 
-.tablex td{
+.tablex td {
   color: white;
   font-size: 1rem;
   font-weight: 400;
@@ -410,32 +432,44 @@ td {
   text-align: left;
 }
 
-/* Karta zawodnika */
-/* Karta zawodnika */
-/* Karta zawodnika */
-
-.playerInfoCard{
-  min-width: 800px;
+.playerInfoList {
+  /* min-width: 800px; */
   background-color: #3d3d3d;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
   box-shadow: 8px 8px 24px 0px rgb(0, 0, 0);
   border-radius: 30px;
   margin-top: 20px;
   margin-bottom: 20px;
-  /* border: 1px solid red; */
+  /* border: 2px solid black; */
 }
 
-.topPlayerInfoCard{
+/* Karta zawodnika */
+/* Karta zawodnika */
+/* Karta zawodnika */
+
+.playerInfoCard {
+  min-width: 800px;
+  background-color: #3d3d3d;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start;
+  justify-content: flex-start; */
+  box-shadow: 8px 8px 24px 0px rgb(0, 0, 0);
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* border: 2px solid black; */
+}
+
+.topPlayerInfoCard {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
 
-.leftPlayerInfoCard{
+.leftPlayerInfoCard {
   margin-left: 20px;
   background-color: #3d3d3d;
   display: flex;
@@ -444,42 +478,43 @@ td {
   justify-content: flex-start;
 }
 
-.rightPlayerInfoCard{
+.rightPlayerInfoCard {
   width: 300px;
   padding-left: 100px;
   display: flex;
   justify-content: flex-end;
 }
 
-.playerImage{
+.playerImage {
   max-height: 250px;
   margin-right: 20px;
   margin-top: 20px;
 }
 
-.row{
+.row {
   display: flex;
 }
 
-.row1{
+.row1 {
   height: 3rem;
   display: flex;
   align-items: center;
   width: max-content;
 }
 
-.teamLogo{
+.teamLogo {
   height: 2.5rem;
   border-radius: 50%;
 }
 
-.firstName{
+.firstName {
   color: white;
   font-weight: 100;
   font-size: 2rem;
   margin-top: 2%;
 }
-.lastName{
+
+.lastName {
   color: white;
   font-weight: 700;
   font-size: 2.8rem;
@@ -487,31 +522,32 @@ td {
   margin-right: 50px;
 }
 
-.number{
+.number {
   margin-left: 50px;
 }
 
-.number, .position{
+.number,
+.position {
   color: white;
   font-size: 1.5rem;
   font-weight: 100;
 }
 
-.separator{
+.separator {
   width: 0.2rem;
   height: 2rem;
   background-color: #4d6bcb;
   margin: 0 20px;
 }
 
-.separator2{
+.separator2 {
   width: 10rem;
   height: 0.2rem;
   background-color: #4d6bcb;
   margin: 20px 0;
 }
 
-.smallText{
+.smallText {
   color: white;
   font-size: 1rem;
   margin-right: 10px;
@@ -519,38 +555,39 @@ td {
   margin-bottom: 5px;
 }
 
-.bigBoldText{
+.bigBoldText {
   color: white;
   font-size: 2.2rem;
   margin-right: 10px;
 }
 
-.row3{
+.row3 {
   display: flex;
   column-gap: 5rem;
 }
 
-.height, .weight{
+.height,
+.weight {
   display: flex;
   align-items: flex-end;
 }
 
-.row4{
+.row4 {
   column-gap: 2.6rem;
   margin-top: 1rem;
 }
 
-.playerAvgsDiv{
+.playerAvgsDiv {
   width: 100%;
   height: auto;
   background-color: #292929;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   /* border-radius: 0 0 30px 30px; */
 }
 
-.avgTable th{
+.avgTable th {
   color: white;
   font-size: 0.8rem;
   margin-right: 10px;
@@ -561,7 +598,7 @@ td {
   text-align: center;
 }
 
-.avgTable td{
+.avgTable td {
   color: white;
   font-size: 1rem;
   margin-right: 10px;
@@ -572,7 +609,7 @@ td {
   text-align: center;
 }
 
-.smallTextAvg{
+.smallTextAvg {
   color: white;
   font-size: 0.8rem;
   margin-right: 10px;
@@ -580,11 +617,11 @@ td {
   margin-bottom: 5px;
 }
 
-.hidTable{
+.hidTable {
   visibility: hidden;
 }
 
-.statsBtn{
+.statsBtn {
   margin: 10px 0;
   color: white;
   padding: 10px;
@@ -592,9 +629,151 @@ td {
   border: 0.2rem solid #4d6bcb;
 }
 
-.topPlayerInfoCard .statsBtn:hover{
+.topPlayerInfoCard .statsBtn:hover {
   color: #4d6bcb;
   background-color: white;
   cursor: pointer;
   transition: 0.5s ease-in-out;
+}
+
+.btn {
+  color: white;
+  border: none;
+  width: 100px;
+  height: 20px;
+  margin: 5px 0px;
+  border-radius: 10px;
+}
+
+.addBtn {
+  background-color: #4d6bcb;
+}
+
+.addBtn:hover {
+  background-color: #4d6acbcc;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background-color: red;
+}
+
+.deleteBtn:hover {
+  background-color: rgba(255, 0, 0, 0.811);
+  cursor: pointer;
+}
+
+.inputClassic {
+  min-width: 600px;
+  width: 50%;
+  padding: 10px 10px;
+  transition: width 0.4s ease-in-out;
+}
+
+textarea {
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  /* resize: none; */
+}
+
+@media screen and (max-width: 1200px) {
+  nav .menu {
+    display: flex;
+  }
+
+  nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav img {
+    display: flex;
+    height: 40px;
+  }
+
+  nav ul {
+    display: none;
+    /* height: 0px; */
+    flex-direction: column;
+    margin-bottom: 0.25rem;
+  }
+
+  nav ul.open {
+    width: 100%;
+    margin-top: 5px;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: flex-end;
+  }
+
+  nav ul li {
+    /* border: 2px solid red; */
+    text-align: right;
+    margin: 0.4rem 3.5rem;
+  }
+
+  .navAdmin h1{
+    margin-bottom: 5px;
+  }
+
+  .navAdmin li{
+    margin-right: 2rem;
+  }
+
+  .wholeScore h1{
+    font-size: 10px;
+  }
+
+  .wholeScore span{
+    font-size: 0.6rem;
+  }
+
+  .score{
+    margin: 0px 10px;
+    width: 120px;
+  }
+
+  .score h1{
+    width: 3rem;
+    font-size: 15px;
+    width: 80px;
+  }
+
+  .tablex a{
+    font-size: 12px;
+  }
+
+  .gridDiv {
+    gap: 3rem 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .teamNameCard{
+    font-size: 12px;
+    height: 10rem;
+  }
+
+  .playerInfoList{
+    width: 90vw;
+  }
+
+  .table td{
+    font-size: 10px;
+    padding: 8px 2px;
+  }
+
+  .table th{
+    font-size: 8px;
+    padding: 10px 2px;
+  }
+
+  .tableStats td{
+    padding: 10px 30px;
+  }
+
 }

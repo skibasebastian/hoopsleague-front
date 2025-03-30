@@ -63,11 +63,12 @@ function ScoresAdmin() {
 
     document.getElementById("AwayTeamScoreLabel").value = "";
     document.getElementById("HomeTeamScoreLabel").value = "";
-
+    window.location.reload(false);
   };
 
   const deleteScore = (Game) => {
     Axios.delete(`http://localhost:3001/api/deletescore/${Game}`);
+    window.location.reload(false);
   }
 
 
@@ -115,7 +116,7 @@ function ScoresAdmin() {
 
               <span className="scoreAway">
                 <Link to={`/teams/${value.AwayTeamID}`}>
-                <img width="100px" src={value.AwayTeamLogo}></img>
+                <img src={value.AwayTeamLogo}></img>
                 <h1>{value.AwayTeamName}</h1>
                 </Link>
               </span>
@@ -128,7 +129,7 @@ function ScoresAdmin() {
 
               <span className="scoreHome">
                 <Link to={`/teams/${value.HomeTeamID}`}>
-                <img width="100px" src={value.HomeTeamLogo}></img>
+                <img src={value.HomeTeamLogo}></img>
                 <h1>{value.HomeTeamName}</h1>
                 </Link>
               </span>

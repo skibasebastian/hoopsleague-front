@@ -18,7 +18,7 @@ function TeamInfo() {
     }).catch((err) => {
       console.log(err)
     })
-  },[])
+  }, [])
 
   useEffect(() => {
     Axios.get("http://localhost:3001/api/getplayerfromteam/", {
@@ -30,18 +30,21 @@ function TeamInfo() {
     }).catch((err) => {
       console.log(err)
     })
-  },[])
+  }, [])
 
   return (
     <div className="form">
-      {TeamNameList.map((value) => {
-        return (
-          <div className="teamNameCard">
-            <img width="100px" src={value.TeamLogo}></img>
-            <h1>{value.TeamName}</h1>
-          </div>
-        );
-      })}
+
+      <div className="gridDiv">
+        {TeamNameList.map((value) => {
+          return (
+            <div className="teamNameCard">
+              <img width="100px" src={value.TeamLogo}></img>
+              <h1>{value.TeamName}</h1>
+            </div>
+          );
+        })}
+      </div>
 
       <h1>Lista zawodników:</h1>
       <table className="table">

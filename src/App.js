@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -26,36 +26,36 @@ function App() {
     <div className="App">
       <ChangePageTitle pageTitle="HoopsLeague - Amateur Basketball League" />
 
-      <NavBar/>
+      <NavBar />
 
-    {/* <h1 className='title'>
+      {/* <h1 className='title'>
         HoopsLeague
     </h1> */}
 
-    <Routes>
-      <Route path="/" element={<Home />} />    
-      <Route path="/table" element={<Table />} /> 
-      <Route path="/schedule" element={<Schedule />} />
-      <Route path="/scores" element={<Scores />} />
-      <Route path="/scores/:GameID" element={<GameInfo />} />
-      <Route path="/teams" element={<Teams />} />  
-      <Route path="/teams/:TeamID" element={<TeamInfo />} />  
-      <Route path="/players" element={<Players />} />
-      <Route path="/players/:PlayerID" element={<PlayerInfo />} />
-      <Route path="/stats" element={<Stats />} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/table" element={<Table />} />
+        <Route path="/schedule" element={<Schedule />} />
+        <Route path="/scores" element={<Scores />} />
+        <Route path="/scores/:GameID" element={<GameInfo />} />
+        <Route path="/teams" element={<Teams />} />
+        <Route path="/teams/:TeamID" element={<TeamInfo />} />
+        <Route path="/players" element={<Players />} />
+        <Route path="/players/:PlayerID" element={<PlayerInfo />} />
+        <Route path="/stats" element={<Stats />} />
 
-      <Route>
-        <Route path="/newsadmin" element={<NewsAdmin />} />
-        <Route path="/scheduleadmin" element={<ScheduleAdmin />} />
-        <Route path="/scoresadmin" element={<ScoresAdmin />} />
-        <Route path="/scoresadmin/:GameID" element={<GameInfoAdmin />} />
-        <Route path="/teamsadmin" element={<TeamsAdmin />} /> 
-        <Route path="/playersadmin" element={<PlayersAdmin />} />
-      </Route>
-    </Routes>
+        <Route>
+          <Route path="/newsadmin" element={<NewsAdmin />} />
+          <Route path="/scheduleadmin" element={<ScheduleAdmin />} />
+          <Route path="/scoresadmin" element={<ScoresAdmin />} />
+          <Route path="/scoresadmin/:GameID" element={<GameInfoAdmin />} />
+          <Route path="/teamsadmin" element={<TeamsAdmin />} />
+          <Route path="/playersadmin" element={<PlayersAdmin />} />
+        </Route>
+      </Routes>
 
-     </div>
-  ); 
+    </div>
+  );
 }
 
 export default App;
